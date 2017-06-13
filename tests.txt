@@ -1,0 +1,25 @@
+comandos do nmap
+
+Substituir o ip “192.168.0.1” pelo indicado no quadro;
+
+
+
+Reguar scan
+-=-=-=-=-
+nmap 10.32.143.254
+
+
+Intense scan plus UDP
+-=-=-=-=-=-
+nmap -sS -sU -T4 -A -v 10.32.143.254
+
+
+Intense scan, all TCP ports
+-=-=-=-=-
+nmap -p 1-65535 -T4 -A -v 10.32.143.254
+
+
+Slow comprehensive scan
+-=-=-=-=-
+nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" 10.32.143.254
+
